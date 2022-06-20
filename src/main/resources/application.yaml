@@ -1,0 +1,89 @@
+# camel configuration
+camel:
+  springboot:
+    jmx-enabled: false
+    main-run-controller: true
+    name: bankingApp
+    shutdownTimeout: 1
+    xmlRests: false
+    xmlRoutes: false
+  component:
+    servlet:
+      name: servlet
+      mapping:
+        enabled: true
+        context-path: /api/*
+# project configuration
+adapter:
+  api:
+    path: /api
+    enableCors: true
+  api-docs:
+    path: /api-docs
+    version: 0.0.1
+    title: bankingApp
+
+#logging configuration path
+logging:
+  config: classpath:logback.xml
+
+# spring boot management server instance properties
+management:
+  server:
+    port: 8080
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: info, health
+      base-path: /
+
+# spring boot server instance properties
+server:
+  port: 8080
+
+# app information
+info:
+  app:
+    name: bankingApp
+    description: Banking app project for Spring Boot/Apache Camel
+    version: 0.0.1-SNAPSHOT
+    
+---
+spring:
+  profiles: local
+
+# spring boot server instance properties
+server:
+  port: 8080
+  undertow:
+    worker-threads: 20
+    io-threads: 1
+    
+---
+spring:
+  profiles: remote
+
+
+redis:
+  jedis:
+    serviceName: kcb-redis-cache
+    servicePort: 6379
+    maxActive: 50
+    maxIdle: 50
+    minIdle: 10
+    blockWhenExhausted: true
+    maxWaitSeconds: 2
+    minEvictableIdleTimeSeconds: 120
+    timeBetweenEvictionRunsSeconds: 60
+    testOnBorrow: false
+    testWhileIdle: true
+    password: cGFzc3dvcmQ0UmVkaXM=
+    timeOutSeconds: 3
+# spring boot server instance properties
+server:
+  port: 8080
+  undertow:
+    worker-threads: 10
+    io-threads: 1
