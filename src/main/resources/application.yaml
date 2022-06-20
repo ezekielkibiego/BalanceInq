@@ -65,22 +65,6 @@ server:
 spring:
   profiles: remote
 
-
-redis:
-  jedis:
-    serviceName: kcb-redis-cache
-    servicePort: 6379
-    maxActive: 50
-    maxIdle: 50
-    minIdle: 10
-    blockWhenExhausted: true
-    maxWaitSeconds: 2
-    minEvictableIdleTimeSeconds: 120
-    timeBetweenEvictionRunsSeconds: 60
-    testOnBorrow: false
-    testWhileIdle: true
-    password: cGFzc3dvcmQ0UmVkaXM=
-    timeOutSeconds: 3
 # spring boot server instance properties
 server:
   port: 8080

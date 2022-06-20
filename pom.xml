@@ -122,12 +122,6 @@
 		</dependency>
  		
  		<!-- Redis -->
- 		<dependency>
- 			<groupId>redis.clients</groupId>
- 			<artifactId>jedis</artifactId>
- 			<version>${jedis.version}</version><!--$NO-MVN-MAN-VER$-->
- 		</dependency>
-
         <!-- Test -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

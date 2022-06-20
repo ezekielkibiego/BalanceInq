@@ -84,7 +84,7 @@ public class MockProcessor implements Processor {
                     "\"businessKeyType\": \"Account Number\"" +
                     "}," +
                     "\"additionalData\": {" +
-                    "\"companyCode\": \"KE0010001\"," +
+                    "\"companyCode\": \"KE0010009\"," +
                     "\"currency\": \"KES\"," +
                     "\"unclearedBalance\": \"-515.00\"," +
                     "\"accountBalance\": \"639389.39\"," +
@@ -124,7 +124,7 @@ public class MockProcessor implements Processor {
                 "\"businessKeyType\": \"Account Number\"" +
                 "}," +
                 "\"additionalData\": {" +
-                "\"companyCode\": \"KE0010001\"," +
+                "\"companyCode\": \"KE0010009\"," +
                 "\"currency\": \"KES\"," +
                 "\"unclearedBalance\": \"-515.00\"," +
                 "\"accountBalance\": \"639389.39\"," +
@@ -162,7 +162,7 @@ public class MockProcessor implements Processor {
                 "\"businessKeyType\": \"Account Number\"" +
                 "}," +
                 "\"additionalData\": {" +
-                "\"companyCode\": \"KE0010001\"," +
+                "\"companyCode\": \"KE0010009\"," +
                 "\"currency\": \"KES\"," +
                 "\"unclearedBalance\": \"-515.00\"," +
                 "\"accountBalance\": \"639389.39\"," +
