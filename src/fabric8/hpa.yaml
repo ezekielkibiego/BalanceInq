@@ -1,0 +1,16 @@
+apiVersion: autoscaling/v2beta1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: bankingApp-mock-redis-config-api
+spec:
+  scaleTargetRef:
+    kind: DeploymentConfig
+    name: bankingApp-mock-redis-config-api
+    apiVersion: apps.openshift.io/v1
+  minReplicas: 1
+  maxReplicas: 1
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        targetAverageUtilization: 80

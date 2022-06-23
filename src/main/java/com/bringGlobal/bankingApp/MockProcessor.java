@@ -7,7 +7,6 @@ import org.apache.camel.Processor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-import static java.lang.Integer.parseInt;
 import static java.lang.Long.parseLong;
 
 @Component
